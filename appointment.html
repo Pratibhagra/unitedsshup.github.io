@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Appointment </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <!-----------Font Awesome---------->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<!----Bootstrap dropdown for selection options-------->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+</head>
+
+
+
+
+
+  <body  data-bs-spy="scroll" data-bs-target=".navbar">
+ 
+    <nav class="navbar sticky-top navbar-header2 navbar-expand-lg " id="navbar11">
+        <div class="container ">
+          <a class="navbar-brand" href="index.html"><img src="unitedimg/unitedlogo.png" height="80px" width="80px" alt="unitedlogo">
+         </a>
+         
+          <button class="navbar-toggler   " type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+          aria-label="Toggle navigation" >
+            <span class=" navbar-toggler"> 
+               <i class="fa fa-bars" aria-hidden="true"></i>  </span>
+          </button>
+
+          <div class=" collapse navbar-collapse justify-center text-uppercase" data-bs-spy="scroll" 
+          data-bs-target="#navbar11" data-bs-root-margin="0px 0px -40%"  id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">specialties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Treatments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="facilities.html">Facilities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Events.html">News & Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+              <a href="appointment.html"><button id="nav-appointment-btn" class="btn m-auto search-btn2 text-uppercase" type="submit" 
+              style="color: #fff;">Appointment</button>
+            </a>
+          </div> 
+        </div>
+      </nav>
+<div class="section-appointment">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mt-3">
+        <div class="card border-danger shadow">
+          <div class="card-header  text-light" style="background-color:rgb(221, 139, 15) !important ;">
+            <h3 class="card-title text-center">Book Appointment</h3>
+            
+          </div>
+          <div class="card-body px-4">
+    <form onsubmit="Mail(); reset(); return false;">
+
+      <div class="form-group">
+        <label for="username">Name :</label>
+        <input type="username" class="form-control" placeholder="Enter Full Name" id="username" required>
+    </div>
+
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" class="form-control" placeholder="Enter Email Address" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact :</label>
+        <input type="contact" class="form-control" placeholder="Enter Mobile Number" id="contact" required>
+      </div>
+
+      <div class="form-group"> <!-- Date input -->
+        <label  for="date">Date:</label>
+        <input type="date" class="form-control" id="date"  placeholder="MM/DD/YYY" required>
+      </div>
+
+      <div class="form-group justify-content-center ">
+        <label class="control-label" for="select" >Select Doctor:</label>
+        <div > 
+          <select required type="username" name="list" id="choices-multiple-remove-button"
+            placeholder="Select Doctor" multiple >
+                <option value="Dr. Darpan Choudhary">Dr. Darpan Choudhary</option>
+                <option value="Dr. Abhishek Bhalotia">Dr. Abhishek Bhalotia</option>
+                <option value="Dr. Vaibhav Nasre">Dr. Vaibhav Nasre</option>
+                <option value="Dr. Parag Jaipuriya">Dr. Parag Jaipuriya</option>
+                <option value="Dr. Payal Pardhi Choudhary">Dr. Payal Pardhi Choudhary</option>
+                <option value="Dr. Juhi Bhalotia ">Dr. Juhi Bhalotia </option>
+                <option value="Dr. Shubhangi Kachore Nasre">Dr. Shubhangi Kachore Nasre</option>
+                <option value="Dr. Nidhi Jaypuriya">Dr. Nidhi Jaypuriya</option>
+                <option value="Dr. Sachin Kelanka">Dr. Sachin Kelanka</option>
+                <option value="Dr. Sristy Kelanka">Dr. Sristy Kelanka</option>
+                <option value="Dr. Parth Patel">Dr. Parth Patel</option>
+                <option value="Dr. Shubham Patle">Dr. Shubham Patle</option>  
+            </select>
+           </div>
+    </div>
+
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <textarea type="subject" class="form-control" placeholder="Enter subject" id="subject"
+          cols="30" rows="4">
+        </textarea>
+      </div>
+      
+        
+
+        <button type="submit" class="btn " style="background-color:rgb(221, 139, 15) !important ; color: #fff;">Submit</button>
+        <button type="reset" class="btn " style="background-color:#24643b !important ; color: #fff;">Reset</button>
+      </form>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!------------------**************Footer******************--------------------->
+     <section class="footer mt-3" id="footer1">
+      <div class="container-fluid py-5 ">
+        <div class="row py-5">
+          <div class="col-lg-10 m-auto">
+            <div class="row ">
+              <div class="col-lg-3 footeraddress">
+                <h3 class="py-4 red ">Contact Us</h3> <a href="https://www.unitedssh.com/" style="text-decoration: none; list-style: none;">
+                <p class="unitedaddress">  Shashtri Ward Behind Nirmal Talkies Gondia, Gondia 441601</p></a>
+                <div>
+                  <p class="link "> Phone: <span class="mobile">+91-8055500056 <br> &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91-8055500057</span></p>
+                </div>
+                <p class="link"> Email: unitedssh@gmail.com</p>
+              </div>
+
+              
+              <div class="col-lg-3 ourdoctor">
+                <h3 class="py-4 red " >Our Doctors</h3>
+                <p class="link">Dr. Darpan Choudhary </p>
+                <p class="link">Dr. Abhishek Bhalotia </p>
+                <p class="link">Dr. Vaibhav Nasre</p>
+                <p class="link">Dr. Parag Jaipuriya </p>
+                <p class="link">Dr. Payal Pardhi Choudhary</p>
+                <p class="link">Dr. Juhi Bhalotia </p>
+             
+                
+              </div>
+
+              <div class="col-lg-3">
+                <h3 class=" red py-4" style="margin-top: 28px;"></h3>
+                
+                <p class="link">Dr. Shubhangi Kachore Nasre </p>
+                <p class="link">Dr. Nidhi Jaypuriya </p>
+                <p class="link">Dr. Sachin Kelanka</p>
+                <p class="link">Dr. Sristy Kelanka</p>
+                <p class="link">Dr. Parth Patel</p>
+                <p class="link">Dr. Shubham Patle </p>
+              </div>
+
+              <div class="col-lg-3 ourdoctor social">
+                <h3 class=" red py-4">Find Us On </h3>
+                <!-- Add font awesome icons -->
+                  <a href="https://www.facebook.com/unitedssh?mibextid=ZbWKwL" class="fa fa-facebook link"></a>
+                  <a href="#" class="fa fa-youtube "></a>
+                  <a href="https://www.instagram.com/united_ssh2022/" class="fa fa-instagram "></a>
+                  <i href="#" class="fa fa-whatsapp " aria-hidden="true"></i>
+
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <section class="footer2">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-lg-10 py-3 m-auto">
+            <div class="row">
+              <div class="col-lg-6 m-auto">
+                <p>Copyright © 2022 United SSH. All Rights Reserved. |
+                   <a href="https://www.unitedssh.com/sitemap.xml" target="_blank" style="text-decoration: none; color: #fff;"   >site map</a></p>
+                 
+              </div>
+              <div class="col-lg-3 lastrow  m-auto ">
+                <p>Designed By <a href="http://www.thebranding.in/">TheBranding </a> 
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     </section>
+
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+     <!------------------**************Footer******************--------------------->
+
+</body>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    function Mail()
+    {
+
+      let username = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      let contact = document.getElementById("contact").value; 
+      let date = document.getElementById("date").value;
+      let select = document.getElementById("choices-multiple-remove-button").value;
+      let subject = document.getElementById("subject").value; 
+        
+
+        Email.send(
+          {
+    Host : "smtp.elasticemail.com",
+    Username : "thebrandingdigital@gmail.com",
+    Password : "992F451127FD63D3DA5BAB7997DFE4422FB4",
+    // SecureToken : '79fd8502-3a01-44bd-8bea-587f16aee4d9',
+    To : 'thebrandingdigi@gmail.com',
+    From : "thebrandingdigital@gmail.com",
+    Subject : "Appointment Book By Patient",
+        
+    Body :  "Patient Name : " + username + "<br/> Email : " + email + "<br/> Contact : " +contact +
+    "<br/> Appointment Date : " + date + "<br/> Selected Doctor : " + select + "<br/> Subject : " + subject 
+   
+  }
+  )
+  .then
+  (
+  message => alert(message)
+    );
+    }
+
+                   // Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    
+//When user click on calender will open and select date
+  $(document).ready(function(){
+    var date_input=$('input[name="date"]'); //our date input has the name "date"
+    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+    var options={
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+    };
+    date_input.datepicker(options);
+  })
+
+  //dropdown for dr selection
+  $(document).ready(function(){
+    
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+       removeItemButton: true,
+       maxItemCount:5,
+       searchResultLimit:5,
+       renderChoiceLimit:5
+     }); 
+    
+    
+});
+</script>
+</html>
